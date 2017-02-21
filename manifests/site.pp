@@ -58,6 +58,7 @@ node default {
   include hub
   include nginx
   include java
+  include zsh
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -70,9 +71,6 @@ node default {
   nodejs::version { '0.12': }
 
   # default ruby versions
-  ruby::version { '1.9.3': }
-  ruby::version { '2.0.0': }
-  ruby::version { '2.1.8': }
   ruby::version { '2.2.4': }
 
   # common, useful packages

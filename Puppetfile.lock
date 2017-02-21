@@ -44,6 +44,11 @@ GITHUBTARBALL
     hub (1.4.4)
 
 GITHUBTARBALL
+  remote: boxen/puppet-java
+  specs:
+    java (1.8.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-nginx
   specs:
     nginx (1.7.0)
@@ -114,6 +119,7 @@ DEPENDENCIES
   homebrew (= 2.1.0)
   hub (= 1.4.4)
   inifile (= 1.4.1)
+  java (= 1.8.0)
   module_data (= 0.0.4)
   nginx (= 1.7.0)
   nodejs (= 5.0.9)
