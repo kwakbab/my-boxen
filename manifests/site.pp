@@ -58,7 +58,7 @@ node default {
   include hub
   include nginx
   include java
-  
+
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
     fail('Please enable full disk encryption and try again')
@@ -74,6 +74,8 @@ node default {
   ruby::version { '2.0.0': }
   ruby::version { '2.1.8': }
   ruby::version { '2.2.4': }
+
+  java::version { '1.8.0': }
 
   # common, useful packages
   package {
