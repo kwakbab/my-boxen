@@ -59,6 +59,7 @@ github "xquartz"
 github "osx"
 github "zsh"
 github "ohmyzsh", ">=0", :repo => "erivello/puppet-ohmyzsh"
+github "atom"
 
 # Optional/custom modules. There are tons available at
 # https://github.com/boxen.

@@ -73,15 +73,29 @@ node default {
   include brewcask
   include zsh
   include ohmyzsh
+  include atom
+
+  atom::package { 'Parinfer': }
+  atom::package { 'highlight-selected': }
+  atom::package { 'ink': }
+  atom::package { 'linter': }
+  atom::package { 'lisp-paredit': }
+  atom::package { 'proto-repl': }
+  atom::package { 'proto-repl-charts': }
+  atom::package { 'set-syntax': }
+  atom::package { 'tool-bar': }
 
   # common, useful packages
   package {
     [
       'ack',
       'findutils',
-      'gnu-tar'
+      'gnu-tar',
+      'leiningen'
     ]:
   }
+
+  package {'appcleaner': provider => 'brewcask'}
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
