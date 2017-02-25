@@ -63,10 +63,10 @@ node default {
   }
 
   # node versions
-  nodejs::version { '0.12': }
+  nodejs::version { '4.0.0': }
 
   # default ruby versions
-  ruby::version { '2.2.4': }
+  ruby::version { '2.4.0': }
 
   # my modules
   include homebrew
@@ -75,6 +75,7 @@ node default {
   include ohmyzsh
   include atom
 
+  # clojure
   atom::package { 'Parinfer': }
   atom::package { 'highlight-selected': }
   atom::package { 'ink': }
@@ -84,6 +85,9 @@ node default {
   atom::package { 'proto-repl-charts': }
   atom::package { 'set-syntax': }
   atom::package { 'tool-bar': }
+
+  # puppet
+  atom::package { 'language-puppet': }
 
   # common, useful packages
   package {
@@ -96,6 +100,7 @@ node default {
   }
 
   package {'appcleaner': provider => 'brewcask'}
+  package {'robomongo': provider => 'brewcask'}
 
   file { "${boxen::config::srcdir}/our-boxen":
     ensure => link,
